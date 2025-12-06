@@ -129,8 +129,8 @@ const About = () => {
         <div className="container-max">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-5xl font-bold mb-2">30+</div>
-              <p className="text-lg">Years of Excellence</p>
+              <div className="text-5xl font-bold mb-2">6+</div>
+              <p className="text-lg">Months of Excellence</p>
             </div>
             <div>
               <div className="text-5xl font-bold mb-2">500+</div>
@@ -141,7 +141,7 @@ const About = () => {
               <p className="text-lg">Happy Customers</p>
             </div>
             <div>
-              <div className="text-5xl font-bold mb-2">30+</div>
+              <div className="text-5xl font-bold mb-2">2+</div>
               <p className="text-lg">Countries Served</p>
             </div>
           </div>

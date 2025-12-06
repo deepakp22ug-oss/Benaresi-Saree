@@ -10,22 +10,15 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-lg">
       {/* Top notification bar */}
-      <div className="bg-gradient-to-r from-primary-800 to-navy text-white py-2 px-4 text-center text-sm">
+      <div className="text-black py-2 px-4 text-center text-sm">
         🌟 Free shipping on orders above ₹5,000 | Premium Quality Guaranteed
       </div>
 
       <div className="container-max">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
+        <div className="flex justify-between gap-2 items-center py-4">          
          <Link to="/" className="flex items-center gap-2">
-        <div className="text-3xl font-serif font-bold">
-        <span className="text-red-600">VINARM</span>
-        <span className="text-yellow-400"> BANARSI RITHEE</span>
-        </div>
+        <img src="/_vbr.png" alt="Royal Sarees Logo" className="w-40" />
         </Link>
-
-
-          {/* Navigation - Desktop */}
           <nav className="hidden md:flex gap-8 font-semibold text-gray-700">
             <Link to="/" className="hover:text-primary-800 transition">Home</Link>
             <Link to="/shop" className="hover:text-primary-800 transition">Shop</Link>

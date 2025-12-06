@@ -72,8 +72,8 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold mb-1">Phone</h3>
                   <p className="text-gray-600">
-                    +91 (0) 542-2200-001<br />
-                    +91 (0) 542-2200-002
+                    +91 7355018138<br />
+                    +91 9235473347
                   </p>
                 </div>
               </div>
@@ -85,8 +85,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold mb-1">Email</h3>
                   <p className="text-gray-600">
-                    VINARMBANARSIRITHEE@gmail.com<br />
-                    VINARMBANARSIRITHEE@gmail.com
+                    vinarmbnarashirithee@gmail.com
                   </p>
                 </div>
               </div>
@@ -192,9 +191,9 @@ const Contact = () => {
         </div>
 
         {/* Map Placeholder */}
-        <div className="bg-white rounded-lg overflow-hidden shadow-lg h-96">
+        <div className="bg-white rounded-lg overflow-hidden shadow-lg">
           <img
-            src="https://via.placeholder.com/1200x400?text=Varanasi+Location+Map"
+            src="https://www.luxurionworld.com/cdn/shop/articles/Banarasi-Sarees-Slider.jpg?v=1726739373"
             alt="Location Map"
             className="w-full h-full object-cover"
           />

@@ -29,8 +29,6 @@ const Collections = () => {
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                    <h2 className="text-3xl font-serif font-bold text-center mb-2">{collection.name}</h2>
-                    <p className="text-sm">{collection.productCount} Products</p>
                     <p className="text-xs mt-4 opacity-0 group-hover:opacity-100 transition">Shop Collection →</p>
                   </div>
                 </div>

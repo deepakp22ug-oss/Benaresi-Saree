@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiTruck, FiLock, FiRotateCcw, FiHeadphones, FiStar } from 'react-icons/fi';
 import { PRODUCTS, COLLECTIONS } from '../data/products';
+import HeroCarousel from '../components/Carousel';
+
 
 const Home = () => {
   useEffect(() => {
@@ -14,34 +16,8 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-20 md:py-32">
-        <div className="container-max">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="animate-fadeInUp">
-              <h1 className="text-4xl md:text-5xl font-serif mb-4">
-                Authentic Banarasi Sarees
-              </h1>
-              <p className="text-xl mb-6 text-gray-200">
-                Discover the timeless elegance of traditional Banarasi sarees with premium craftsmanship and heritage designs.
-              </p>
-              <div className="flex gap-4">
-                <Link to="/shop" className="btn-primary">
-                  Shop Now
-                </Link>
-                <Link to="/collections" className="btn-outline">
-                  Browse Collections
-                </Link>
-              </div>
-            </div>
-            <div className="hidden md:block animate-fadeInUp">
-              <img
-                src="https://www.luxurionworld.com/cdn/shop/articles/Banarasi-Sarees-Slider.jpg?v=1726739373"
-                alt="Hero"
-                className="rounded-lg shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
+      <section className="text-white ">
+              <HeroCarousel/>
       </section>
 
       {/* Trust Banner */}
@@ -142,8 +118,7 @@ const Home = () => {
                     />
                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors"></div>
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                      <h3 className="text-2xl font-serif font-bold text-center">{collection.name}</h3>
-                      <p className="text-sm mt-2">{collection.productCount} Products</p>
+                      {/* <h3 className="text-2xl font-serif font-bold text-center">{collection.name}</h3> */}
                     </div>
                   </div>
                 </div>
