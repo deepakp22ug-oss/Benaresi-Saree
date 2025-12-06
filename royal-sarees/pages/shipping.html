@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shipping & Returns - VINARM BANARSI RITHEE">
+    <title>Shipping & Returns | VINARM BANARSI RITHEE</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .shipping-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: var(--spacing-xxl) var(--spacing-lg);
+        }
+
+        .shipping-section {
+            margin-bottom: var(--spacing-xxl);
+            padding-bottom: var(--spacing-xxl);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .shipping-section:last-child {
+            border-bottom: none;
+        }
+
+        .shipping-section h2 {
+            color: var(--primary-maroon);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .shipping-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .shipping-card {
+            background-color: var(--bg-light);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .shipping-card h3 {
+            color: var(--primary-maroon);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .shipping-card p {
+            color: var(--text-light);
+            font-size: var(--font-size-sm);
+        }
+
+        .faq-item {
+            background-color: var(--bg-light);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .faq-item h4 {
+            color: var(--primary-maroon);
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-icon {
+            transition: var(--transition);
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        table thead {
+            background-color: var(--primary-maroon);
+            color: white;
+        }
+
+        table th {
+            padding: var(--spacing-lg);
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            padding: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        table tbody tr:hover {
+            background-color: var(--bg-light);
+        }
+
+        .highlight {
+            background-color: var(--primary-cream);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-maroon);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .highlight strong {
+            color: var(--primary-maroon);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-crown"></i>
+                <span>VINARM BANARSI RITHEE</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#search" class="nav-icon" title="Search"><i class="fas fa-search"></i></a>
+                <a href="#wishlist" class="nav-icon" title="Wishlist"><i class="fas fa-heart"></i><span class="badge" id="wishlistCount">0</span></a>
+                <a href="#cart" class="nav-icon" title="Cart"><i class="fas fa-shopping-bag"></i><span class="badge" id="cartCount">0</span></a>
+                <a href="#account" class="nav-icon" title="Account"><i class="fas fa-user"></i></a>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section style="background: linear-gradient(135deg, var(--primary-navy), var(--primary-maroon)); color: white; padding: var(--spacing-xxl) var(--spacing-lg); text-align: center;">
+        <h1 style="margin-bottom: var(--spacing-md);">Shipping & Returns</h1>
+        <p>Everything you need to know about delivery and our hassle-free return policy</p>
+    </section>
+
+    <!-- Shipping Container -->
+    <div class="shipping-container">
+        <!-- Shipping Overview -->
+        <section class="shipping-section">
+            <h2>Global Shipping Information</h2>
+            <p style="margin-bottom: var(--spacing-lg);">We ship to over 150 countries worldwide. All packages are carefully packed in premium boxes with protective materials to ensure your saree arrives in perfect condition.</p>
+            
+            <div class="shipping-grid">
+                <div class="shipping-card">
+                    <h3>India Shipping</h3>
+                    <p><strong>Delivery Time:</strong> 3-5 business days</p>
+                    <p><strong>Cost:</strong> Free for orders above ₹5000</p>
+                    <p><strong>Tracking:</strong> Real-time tracking available</p>
+                </div>
+                <div class="shipping-card">
+                    <h3>International Shipping</h3>
+                    <p><strong>Delivery Time:</strong> 7-14 business days</p>
+                    <p><strong>Cost:</strong> Calculated at checkout</p>
+                    <p><strong>Tracking:</strong> Full international tracking included</p>
+                </div>
+                <div class="shipping-card">
+                    <h3>Express Delivery</h3>
+                    <p><strong>Delivery Time:</strong> 1-2 business days (India)</p>
+                    <p><strong>Cost:</strong> ₹500 additional charge</p>
+                    <p><strong>Availability:</strong> Select pin codes only</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shipping Timeline -->
+        <section class="shipping-section">
+            <h2>Delivery Timeline by Region</h2>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Region</th>
+                            <th>Standard Delivery</th>
+                            <th>Express Delivery</th>
+                            <th>Shipping Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>India - Metro Cities</td>
+                            <td>2-3 business days</td>
+                            <td>1 business day</td>
+                            <td>Free (₹5000+)</td>
+                        </tr>
+                        <tr>
+                            <td>India - Non-Metro</td>
+                            <td>3-5 business days</td>
+                            <td>2 business days</td>
+                            <td>₹200 (₹3000+)</td>
+                        </tr>
+                        <tr>
+                            <td>UAE, Saudi, Qatar</td>
+                            <td>5-7 business days</td>
+                            <td>2-3 business days</td>
+                            <td>$25-40</td>
+                        </tr>
+                        <tr>
+                            <td>USA, Canada</td>
+                            <td>7-10 business days</td>
+                            <td>3-5 business days</td>
+                            <td>$40-60</td>
+                        </tr>
+                        <tr>
+                            <td>UK, Europe</td>
+                            <td>8-12 business days</td>
+                            <td>4-6 business days</td>
+                            <td>£25-35</td>
+                        </tr>
+                        <tr>
+                            <td>Australia, NZ</td>
+                            <td>10-14 business days</td>
+                            <td>5-7 business days</td>
+                            <td>AUD 50-80</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="highlight">
+                <strong>📌 Note:</strong> Delivery times are calculated from the date your order is confirmed and shipped. Orders are typically processed within 1-2 business days. Weekends and public holidays are not included in delivery estimates.
+            </div>
+        </section>
+
+        <!-- Packaging & Quality -->
+        <section class="shipping-section">
+            <h2>Premium Packaging</h2>
+            <p style="margin-bottom: var(--spacing-lg);">Every saree is packed with utmost care to ensure it reaches you in pristine condition:</p>
+            
+            <ul style="margin-left: var(--spacing-lg); line-height: 2.2; color: var(--text-light);">
+                <li><i class="fas fa-check-circle" style="color: var(--primary-maroon); margin-right: var(--spacing-sm);"></i> Wrapped in premium muslin cloth</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary-maroon); margin-right: var(--spacing-sm);"></i> Placed in acid-free tissue paper</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary-maroon); margin-right: var(--spacing-sm);"></i> Packed in sturdy corrugated boxes</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary-maroon); margin-right: var(--spacing-sm);"></i> Protective bubble wrap included</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary-maroon); margin-right: var(--spacing-sm);"></i> Authenticity certificate & care instructions enclosed</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary-maroon); margin-right: var(--spacing-sm);"></i> Fragile stickers for careful handling</li>
+            </ul>
+        </section>
+
+        <!-- Return Policy -->
+        <section class="shipping-section">
+            <h2>Return Policy</h2>
+            
+            <div class="highlight">
+                <strong>✓ 30-Day Return Policy:</strong> We want you to be completely satisfied with your purchase. If you're not happy with your saree, we offer a hassle-free return within 30 days of delivery.
+            </div>
+
+            <h3 style="color: var(--primary-maroon); margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg);">Return Eligibility</h3>
+            <ul style="margin-left: var(--spacing-lg); line-height: 2; color: var(--text-light);">
+                <li>✓ Saree must be unworn and unwashed</li>
+                <li>✓ Original tags and labels must be intact</li>
+                <li>✓ Saree must be returned in original packaging</li>
+                <li>✓ Return initiated within 30 days of delivery</li>
+                <li>✓ No damage or stains on the fabric</li>
+            </ul>
+
+            <h3 style="color: var(--primary-maroon); margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg);">Return Process</h3>
+            <ol style="margin-left: var(--spacing-lg); line-height: 2.2; color: var(--text-light);">
+                <li><strong>Initiate Return:</strong> Contact our support team via WhatsApp, email, or phone</li>
+                <li><strong>Get RMA Number:</strong> You'll receive a return authorization number</li>
+                <li><strong>Pack & Ship:</strong> Pack the saree securely in original packaging</li>
+                <li><strong>Submit Return:</strong> Send using the provided prepaid return label (if available)</li>
+                <li><strong>Inspection:</strong> We'll inspect the returned saree</li>
+                <li><strong>Refund:</strong> Refund processed within 5-7 business days</li>
+            </ol>
+
+            <div class="highlight" style="margin-top: var(--spacing-lg);">
+                <strong>💳 Refund Method:</strong> Refunds will be processed to the original payment method used for purchase.
+            </div>
+        </section>
+
+        <!-- Exchanges -->
+        <section class="shipping-section">
+            <h2>Exchange Policy</h2>
+            <p style="margin-bottom: var(--spacing-lg);">Changed your mind about the color or design? We offer free exchanges within 30 days of delivery.</p>
+            
+            <ul style="margin-left: var(--spacing-lg); line-height: 2; color: var(--text-light);">
+                <li><i class="fas fa-arrow-right" style="color: var(--primary-maroon); margin-right: var(--spacing-sm);"></i> <strong>Exchange for free</strong> to any other saree of equal or lesser value</li>
+                <li><i class="fas fa-arrow-right" style="color: var(--primary-maroon); margin-right: var(--spacing-sm);"></i> <strong>Pay the difference</strong> if exchanging for a higher-priced item</li>
+                <li><i class="fas fa-arrow-right" style="color: var(--primary-maroon); margin-right: var(--spacing-sm);"></i> <strong>Free return shipping</strong> for exchanges within India</li>
+                <li><i class="fas fa-arrow-right" style="color: var(--primary-maroon); margin-right: var(--spacing-sm);"></i> <strong>Faster delivery</strong> - get your new saree in 3-5 days</li>
+            </ul>
+        </section>
+
+        <!-- Damaged Items -->
+        <section class="shipping-section">
+            <h2>Damaged or Defective Items</h2>
+            <p style="margin-bottom: var(--spacing-lg);">We take pride in our packaging. However, if you receive a damaged or defective saree:</p>
+            
+            <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: var(--spacing-lg); border-radius: 4px; margin-bottom: var(--spacing-lg);">
+                <strong style="color: var(--text-dark);">Report within 48 hours of delivery</strong><br>
+                <p style="margin-top: var(--spacing-sm);">Contact us immediately with photos of the damage. We will arrange for a replacement or full refund without requiring a return.</p>
+            </div>
+
+            <p style="color: var(--text-light);">Contact: <a href="mailto:support@royalsarees.com" style="color: var(--primary-maroon); font-weight: 600;">support@royalsarees.com</a> or WhatsApp: <a href="https://wa.me/919876543210" style="color: var(--primary-maroon); font-weight: 600;">+91 98765 43210</a></p>
+        </section>
+
+        <!-- Customs & Duties -->
+        <section class="shipping-section">
+            <h2>Customs & Import Duties</h2>
+            <p style="margin-bottom: var(--spacing-lg);">For international shipments, please note:</p>
+            
+            <div class="highlight">
+                <p><strong>Customs Duty:</strong> Customers are responsible for any customs duties, taxes, or import fees levied by their country. These costs are the buyer's responsibility and are not included in the shipping cost.</p>
+            </div>
+
+            <p style="margin-top: var(--spacing-lg); color: var(--text-light);">We will declare the item's actual value on the customs form. Delivery delays due to customs clearance are beyond our control, but we'll keep you updated throughout the process.</p>
+        </section>
+
+        <!-- FAQ -->
+        <section class="shipping-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <h4>Can I track my order?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">
+                    <p>Yes! You'll receive a tracking number via email as soon as your order ships. You can track your package in real-time on the courier's website or through our website.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <h4>What if my package is lost?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">
+                    <p>We work with reliable courier partners with excellent track records. If your package is lost, we'll file a claim and either send a replacement or provide a full refund within 15 days.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <h4>Can I change my address after placing an order?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">
+                    <p>You can change the delivery address if your order hasn't been shipped yet. Contact support immediately with your order number and new address. If already shipped, you'll need to refuse the delivery and we can reshop to the correct address.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <h4>Do you offer gift wrapping?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">
+                    <p>Yes! We offer premium gift wrapping for special occasions. Select this option during checkout. Your saree will be beautifully wrapped and include a personalized gift message if you'd like.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <h4>What if I want to return during the sale period?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">
+                    <p>Sale items are also covered by our 30-day return policy. As long as the saree is unworn and unwashed, you can return it within 30 days of delivery for a full refund of the discounted price.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <h4>Can I return internationally?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">
+                    <p>Yes, international returns are accepted. You'll need to cover the return shipping cost, but we'll provide you with our return address. Once received and inspected, we'll refund the purchase amount.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support -->
+        <section class="shipping-section" style="border-bottom: none;">
+            <h2>Need Help?</h2>
+            <p style="margin-bottom: var(--spacing-lg);">Our customer support team is here to help with any questions about shipping, returns, or your order.</p>
+            
+            <div class="shipping-grid">
+                <div class="shipping-card">
+                    <h3><i class="fas fa-envelope" style="margin-right: var(--spacing-sm);"></i> Email</h3>
+                    <p><a href="mailto:support@royalsarees.com" style="color: var(--primary-maroon); font-weight: 600;">support@royalsarees.com</a></p>
+                </div>
+                <div class="shipping-card">
+                    <h3><i class="fas fa-phone" style="margin-right: var(--spacing-sm);"></i> WhatsApp</h3>
+                    <p><a href="https://wa.me/919876543210" style="color: var(--primary-maroon); font-weight: 600;">+91 98765 43210</a></p>
+                </div>
+                <div class="shipping-card">
+                    <h3><i class="fas fa-clock" style="margin-right: var(--spacing-sm);"></i> Hours</h3>
+                    <p>Mon-Fri: 10 AM - 6 PM IST<br>Sat-Sun: 11 AM - 4 PM IST</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>VINARM BANARSI RITHEE</h4>
+                    <p>Premium handwoven Banarasi Sarees for the modern woman who values tradition and elegance.</p>
+                    <div class="social-links">
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="shipping.html">Shipping & Returns</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#size-guide">Size Guide</a></li>
+                        <li><a href="#care">Care Instructions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="mailto:hello@royalsarees.com">hello@royalsarees.com</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/919876543210">+91 98765 43210</a></p>
+                    <p>Phone: +1 (800) ROYAL-SAR</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VINARM BANARSI RITHEE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        function toggleFaq(element) {
+            element.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
+

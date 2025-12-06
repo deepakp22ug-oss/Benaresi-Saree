@@ -1,0 +1,403 @@
+export const PRODUCTS = [
+  {
+    id: 1,
+    name: "Bridal Maroon Banarasi",
+    category: "bridal",
+    fabric: "katan",
+    collection: "Bridal Collection",
+    price: 42000,
+    originalPrice: 50000,
+    currency: "INR",
+    image: "https://www.koskii.com/cdn/shop/products/koskii-maroon-zariwork-banarasi-designer-saree-saus0018594_maroon_8.jpg?v=1638375760&width=1800",
+    images: [
+      "https://www.koskii.com/cdn/shop/products/koskii-maroon-zariwork-banarasi-designer-saree-saus0018594_maroon_1.jpg?v=1638375760&width=1800",
+      "https://www.koskii.com/cdn/shop/products/koskii-maroon-zariwork-banarasi-designer-saree-saus0018594_maroon_2.jpg?v=1638375759&width=1800",
+      "https://www.koskii.com/cdn/shop/products/koskii-maroon-zariwork-banarasi-designer-saree-saus0018594_maroon_7.jpg?v=1638375761&width=1800",
+    ],
+    rating: 4.9,
+    reviews: 52,
+    badge: "Bestseller",
+    description: "Exquisite bridal Banarasi saree with intricate gold zari work. Perfect for your special day.",
+    details: {
+      weave: "Pure Banarasi Katan",
+      zari: "24k Gold",
+      blouse: "Included",
+      length: "5.5 meters"
+    },
+    colors: ["Maroon", "Burgundy"],
+    inStock: true,
+    stock: 5
+  },
+  {
+    id: 2,
+    name: "Wedding Gold Saree",
+    category: "wedding",
+    fabric: "organza",
+    collection: "Wedding Collection",
+    price: 28000,
+    originalPrice: 35000,
+    currency: "INR",
+    image: "https://m.media-amazon.com/images/I/614s7Pg7T4L._SY879_.jpg",
+    images: [
+      "https://m.media-amazon.com/images/I/51Z7yIcha9L._SY879_.jpg",
+      "https://m.media-amazon.com/images/I/61LEmlgj3wL._SY879_.jpg",
+      "https://m.media-amazon.com/images/I/614KG9qLQqL._SY879_.jpg",
+    ],
+    rating: 4.8,
+    reviews: 43,
+    badge: "New",
+    description: "Elegant wedding saree with beautiful gold work on organza fabric.",
+    details: {
+      weave: "Banarasi Organza",
+      zari: "18k Gold",
+      blouse: "Included",
+      length: "5.5 meters"
+    },
+    colors: ["Gold", "Cream"],
+    inStock: true,
+    stock: 8
+  },
+  {
+    id: 3,
+    name: "Party Navy Blue",
+    category: "party",
+    fabric: "georgette",
+    collection: "Party Wear",
+    price: 15000,
+    originalPrice: 20000,
+    currency: "INR",
+    image: "https://sutraclothing.in/cdn/shop/files/29A7246.webp?v=1759576775&width=1000",
+    images: [
+      "https://sutraclothing.in/cdn/shop/files/29A7240.webp?v=1759576775&width=1000",
+      "https://sutraclothing.in/cdn/shop/files/29A7244.webp?v=1759576775&width=1000",
+      "https://sutraclothing.in/cdn/shop/files/29A7250.webp?v=1759576775&width=1000",
+    ],
+    rating: 4.7,
+    reviews: 35,
+    badge: "Sale",
+    description: "Stunning navy blue party saree with delicate embellishments.",
+    details: {
+      weave: "Banarasi Georgette",
+      zari: "Silver",
+      blouse: "Included",
+      length: "5.5 meters"
+    },
+    colors: ["Navy", "Black"],
+    inStock: true,
+    stock: 12
+  },
+  {
+    id: 4,
+    name: "Everyday Emerald",
+    category: "everyday",
+    fabric: "silk",
+    collection: "Pure Katan Silk",
+    price: 11000,
+    originalPrice: 14000,
+    currency: "INR",
+    image: "https://i0.wp.com/navja.in/wp-content/uploads/2025/07/1002895694.jpg?w=1080&ssl=1",
+    images: [
+      "https://i0.wp.com/navja.in/wp-content/uploads/2025/07/1002895696.jpg?w=1080&ssl=1",
+      "https://i0.wp.com/navja.in/wp-content/uploads/2025/07/1002895695.jpg?w=1080&ssl=1",
+      "https://i0.wp.com/navja.in/wp-content/uploads/2025/07/1002895703.jpg?w=1080&ssl=1",
+    ],
+    rating: 4.6,
+    reviews: 28,
+    badge: null,
+    description: "Perfect everyday saree in beautiful emerald green with minimal design.",
+    details: {
+      weave: "Pure Banarasi Silk",
+      zari: "Minimal",
+      blouse: "Included",
+      length: "5.5 meters"
+    },
+    colors: ["Emerald", "Green"],
+    inStock: true,
+    stock: 15
+  },
+  {
+    id: 5,
+    name: "Festival Red Saree",
+    category: "festival",
+    fabric: "katan",
+    collection: "Bridal Collection",
+    price: 32000,
+    originalPrice: 40000,
+    currency: "INR",
+    image: "https://www.sacredweaves.com/cdn/shop/files/HO68242_ad5c34cd-48ef-4d14-bbc3-4d164d38e4ef_2048x.jpg?v=1726818194",
+    images: [
+      "https://www.sacredweaves.com/cdn/shop/files/HO68242_9_b770dff4-980d-4fdb-aa39-8a88300e3387_2048x.jpg?v=1738671137",
+      "https://www.sacredweaves.com/cdn/shop/files/HO68242_6_64091660-4838-461c-a79b-17e8880f8f41_2048x.jpg?v=1726818194",
+      "https://www.sacredweaves.com/cdn/shop/files/HO68242_3_739f3593-d124-456e-9d88-c2f07685184e_2048x.jpg?v=1726818194",
+    ],
+    rating: 4.8,
+    reviews: 40,
+    badge: "Bestseller",
+    description: "Traditional festival saree with bold red color and intricate patterns.",
+    details: {
+      weave: "Pure Banarasi Katan",
+      zari: "24k Gold",
+      blouse: "Included",
+      length: "5.5 meters"
+    },
+    colors: ["Red", "Scarlet"],
+    inStock: true,
+    stock: 7
+  },
+  {
+    id: 6,
+    name: "Handloom Cream",
+    category: "everyday",
+    fabric: "tissue",
+    collection: "Handloom Sarees",
+    price: 9500,
+    originalPrice: 12000,
+    currency: "INR",
+    image: "",
+    images: [
+      "https://www.sacredweaves.com/cdn/shop/files/JS295984_1_5000x.jpg?v=1743506669",
+      "https://www.sacredweaves.com/cdn/shop/files/JS295984_7_2048x.jpg?v=1743506669",
+      "https://www.sacredweaves.com/cdn/shop/files/JS295984_6_2048x.jpg?v=1743506669",
+    ],
+    rating: 4.5,
+    reviews: 32,
+    badge: null,
+    description: "Light and comfortable tissue saree perfect for any occasion.",
+    details: {
+      weave: "Handloom Tissue",
+      zari: "Silver",
+      blouse: "Included",
+      length: "5.5 meters"
+    },
+    colors: ["Cream", "Beige"],
+    inStock: true,
+    stock: 20
+  },
+  {
+    id: 7,
+    name: "Wedding Cream Silk",
+    category: "wedding",
+    fabric: "silk",
+    collection: "Wedding Collection",
+    price: 25000,
+    originalPrice: 32000,
+    currency: "INR",
+    image: "https://tilfi.com/cdn/shop/files/22Cream-BeigePKSKadwaAnimalMeenaBootiRoopaSonaBorderShikaargahVasketSareeTILFI1461_1_2048x.jpg?v=1703078701",
+    images: [
+      "https://tilfi.com/cdn/shop/files/22Cream-BeigePKSKadwaAnimalMeenaBootiRoopaSonaBorderShikaargahVasketSareeTILFI1498_1_5000x.jpg?v=1703078701",
+      "https://tilfi.com/cdn/shop/files/22Cream-BeigePKSKadwaAnimalMeenaBootiRoopaSonaBorderShikaargahVasketSareeTILFI1463_1_5000x.jpg?v=1703076309",
+      "https://tilfi.com/cdn/shop/files/22Cream-BeigePKSKadwaAnimalMeenaBootiRoopaSonaBorderShikaargahVasketSareeTILFI1478_1_5000x.jpg?v=1703076300",
+    ],
+    rating: 4.7,
+    reviews: 38,
+    badge: "New",
+    description: "Timeless cream silk saree with elegant gold border.",
+    details: {
+      weave: "Pure Silk",
+      zari: "18k Gold",
+      blouse: "Included",
+      length: "5.5 meters"
+    },
+    colors: ["Cream", "White"],
+    inStock: true,
+    stock: 6
+  },
+  {
+    id: 8,
+    name: "Party Emerald Saree",
+    category: "party",
+    fabric: "georgette",
+    collection: "Party Wear",
+    price: 18000,
+    originalPrice: 24000,
+    currency: "INR",
+    image: "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/2/b/2b9742bPSSBG02_4.jpg?rnd=20200526195200&tr=w-256",
+    images: [
+      "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/2/b/2b9742bPSSBG02_2.jpg?rnd=20200526195200&tr=w-256",
+      "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/2/b/2b9742bPSSBG02_3.jpg?rnd=20200526195200&tr=w-256",
+      "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/2/b/2b9742bPSSBG02_5.jpg?rnd=20200526195200&tr=w-256",
+    ],
+    rating: 4.8,
+    reviews: 45,
+    badge: "Bestseller",
+    description: "Sophisticated emerald saree perfect for evening parties.",
+    details: {
+      weave: "Banarasi Georgette",
+      zari: "Gold",
+      blouse: "Included",
+      length: "5.5 meters"
+    },
+    colors: ["Emerald", "Forest Green"],
+    inStock: true,
+    stock: 9
+  },
+  {
+    id: 9,
+    name: "Bridal Cream Saree",
+    category: "bridal",
+    fabric: "katan",
+    collection: "Bridal Collection",
+    price: 45000,
+    originalPrice: 55000,
+    currency: "INR",
+    image: "https://www.chhabra555.com/cdn/shop/files/WTVR9133_1_1800x1800.jpg?v=1756758312",
+    images: [
+      "https://www.chhabra555.com/cdn/shop/files/WTVR9133_4_1800x1800.jpg?v=1756800415",
+      "https://www.chhabra555.com/cdn/shop/files/WTVR9133_2_1800x1800.jpg?v=1756800415",
+      "https://www.chhabra555.com/cdn/shop/files/WTVR9133_5_1800x1800.jpg?v=1756800415",
+      "https://www.chhabra555.com/cdn/shop/files/WTVR9133_6_1800x1800.jpg?v=1756800415",
+    ],
+    rating: 5.0,
+    reviews: 55,
+    badge: "Bestseller",
+    description: "Premium bridal saree in luxurious cream with extensive zari work.",
+    details: {
+      weave: "Pure Banarasi Katan",
+      zari: "24k Gold",
+      blouse: "Included",
+      length: "5.5 meters"
+    },
+    colors: ["Cream", "Off-White"],
+    inStock: true,
+    stock: 4
+  },
+  {
+    id: 10,
+    name: "Festival Gold Tissue",
+    category: "festival",
+    fabric: "tissue",
+    collection: "Organza Sarees",
+    price: 16000,
+    originalPrice: 21000,
+    currency: "INR",
+    image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSFgXc0dDw6PHQqWP8dqKgdOEe_mdsxGTt0dP8W7CnG08uZaG7yo-UhBd1WpFEnufY86KPI3yvnxEr8qVsbIUvN5srkUKXGhkN_I1R5DSE3",
+    images: [
+      "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRqNAeYy56WaVbDdp_ND36LJpZqABu_D9voiOFx2QU5hGj61N8wGPQKElB8fopmFBgcLRqyoX1b8Wgkx_yxpqBHJh_r564v0XKYYfk7Oe8",
+      "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRDZk40eEu78QpUCNi0t14TSFKF2ROwp0m6vDnS6qCNGiWhcAr94Be_d6KIZczDGEr6EGpsOLNKQ6B13VGVC-I1UERPFQHxhGskhAbnLzTq",
+      "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSFgXc0dDw6PHQqWP8dqKgdOEe_mdsxGTt0dP8W7CnG08uZaG7yo-UhBd1WpFEnufY86KPI3yvnxEr8qVsbIUvN5srkUKXGhkN_I1R5DSE3",
+    ],
+    rating: 4.6,
+    reviews: 30,
+    badge: null,
+    description: "Lightweight tissue saree with gold accents, perfect for festivals.",
+    details: {
+      weave: "Tissue with Gold",
+      zari: "Gold",
+      blouse: "Included",
+      length: "5.5 meters"
+    },
+    colors: ["Gold", "Yellow"],
+    inStock: true,
+    stock: 11
+  },
+  {
+    id: 11,
+    name: "Everyday Purple",
+    category: "everyday",
+    fabric: "georgette",
+    collection: "Pure Katan Silk",
+    price: 12500,
+    originalPrice: 16000,
+    currency: "INR",
+    image: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTKkUUkW_VGhP5ivPswU9mWERettqXqoDNJ6rtA8ZG-DgFuSWj22n4vcHvLgFJ8DogToYAftRIVhV5d8R4QsPYC0BOwwNvW8v4kpK8xUzU",
+    images: [
+      "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ-MXEjlgPEb1QOEqkDSquFFpzRIaIniK1t4HHO4Cfbg3C-W_NsyA3unEEcpr9x66zoD7YEIvyAeQ4oDj-gI3BhIMrwCbQxFnu8Fv_53wbS1wuMiZ9Z_tML",
+      "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTHAqFwUbiE5eY4Qj-v93BzWUvFajMNLt6cTaTbL9lO0fT94qevi28OSJ008IdWBGWCu1zPRAdV8VMpfV1Q7hX4_l4coFMX_4XDHfOy7D0",
+      "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTKkUUkW_VGhP5ivPswU9mWERettqXqoDNJ6rtA8ZG-DgFuSWj22n4vcHvLgFJ8DogToYAftRIVhV5d8R4QsPYC0BOwwNvW8v4kpK8xUzU",
+    ],
+    rating: 4.5,
+    reviews: 25,
+    badge: null,
+    description: "Versatile purple saree for everyday wear with subtle border design.",
+    details: {
+      weave: "Banarasi Georgette",
+      zari: "Minimal Silver",
+      blouse: "Included",
+      length: "5.5 meters"
+    },
+    colors: ["Purple", "Violet"],
+    inStock: true,
+    stock: 14
+  },
+  {
+    id: 12,
+    name: "Wedding Maroon Silk",
+    category: "wedding",
+    fabric: "silk",
+    collection: "Wedding Collection",
+    price: 29000,
+    originalPrice: 38000,
+    currency: "INR",
+    image: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOesxL7HmDRQWELjI6_xa-w1DmxG_rBFIyQm9p67FrUe8a0ZEke6Iv1Mg_a-dJSOaVu5PcQRugOxqgNcDnlTNldgpOEeUMQBCxVyYHCw0ulbntWwWhNLDrng",
+    images: [
+      "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTAoNJpMYayZNdqclNK6JdBCqK5J_iWNJ_hLGxhtKJC64LeOZfOHdd6E4N2gWBbrceZ_2haU2PpnfJ437CG-2OHBYUu4NEOpJLmZagl2_A",
+      "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR6v29GIZ7EgQueibAfvG02d2GA82rkgpuUU7JYSLJyJHh61Sn6N_BCYhcRCsJ5nwutd3LsxBfxeiETWOXW8RRyYfPp7bPFr3LwPr4tD-0VyAmA3uejxs99",
+      "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSa1n4y7k9Ar3O37NgbFS19YmZnq4pR_hlrnMKvbyI-cu8WI_tYW4EeVFy_LeQN65oYNzHorTXrycclUjnwwXqSbjpXaLPdWanJX4r-GQdo0CaEr_Bxwyb9jA",
+    ],
+    rating: 4.7,
+    reviews: 42,
+    badge: "New",
+    description: "Rich maroon wedding saree with traditional patterns and excellent craftsmanship.",
+    details: {
+      weave: "Pure Silk",
+      zari: "24k Gold",
+      blouse: "Included",
+      length: "5.5 meters"
+    },
+    colors: ["Maroon", "Deep Red"],
+    inStock: true,
+    stock: 6
+  },
+];
+
+export const COLLECTIONS = [
+  {
+    id: 1,
+    name: "Bridal Collection",
+    description: "Exquisite bridal sarees for your special day",
+    image: "/assets/collection-1.svg",
+    productCount: 3,
+    link: "/shop?collection=Bridal"
+  },
+  {
+    id: 2,
+    name: "Wedding Collection",
+    description: "Elegant sarees for wedding celebrations",
+    image: "/assets/collection-2.svg",
+    productCount: 4,
+    link: "/shop?collection=Wedding"
+  },
+  {
+    id: 3,
+    name: "Party Wear",
+    description: "Stunning party sarees with glamorous designs",
+    image: "/assets/collection-3.svg",
+    productCount: 2,
+    link: "/shop?collection=Party"
+  },
+  {
+    id: 4,
+    name: "Pure Katan Silk",
+    description: "Traditional pure katan silk sarees",
+    image: "/assets/collection-4.svg",
+    productCount: 2,
+    link: "/shop?collection=Katan"
+  },
+  {
+    id: 5,
+    name: "Organza Sarees",
+    description: "Light and breathable organza collection",
+    image: "/assets/collection-5.svg",
+    productCount: 2,
+    link: "/shop?collection=Organza"
+  },
+  {
+    id: 6,
+    name: "Handloom Sarees",
+    description: "Authentic handloom woven sarees",
+    image: "/assets/collection-6.svg",
+    productCount: 1,
+    link: "/shop?collection=Handloom"
+  }
+];
+

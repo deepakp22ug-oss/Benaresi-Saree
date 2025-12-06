@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VINARM BANARSI RITHEE - Premium Banarasi Sarees, Handwoven by Master Artisans">
+    <meta name="keywords" content="Banarasi Sarees, Luxury Sarees, Handloom, Silk Sarees, Indian Textiles">
+    <meta name="author" content="VINARM BANARSI RITHEE">
+    <title>VINARM BANARSI RITHEE - Premium Banarasi Sarees | Luxury Handwoven Textiles</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-crown"></i>
+                <span>VINARM BANARSI RITHEE</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="pages/shop.html" class="nav-link">Shop</a>
+                <a href="pages/collections.html" class="nav-link">Collections</a>
+                <a href="pages/about.html" class="nav-link">About Us</a>
+                <a href="pages/contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#search" class="nav-icon" title="Search"><i class="fas fa-search"></i></a>
+                <a href="#wishlist" class="nav-icon" title="Wishlist"><i class="fas fa-heart"></i><span class="badge" id="wishlistCount">0</span></a>
+                <a href="#cart" class="nav-icon" title="Cart"><i class="fas fa-shopping-bag"></i><span class="badge" id="cartCount">0</span></a>
+                <a href="#account" class="nav-icon" title="Account"><i class="fas fa-user"></i></a>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">VINARM BANARSI RITHEE</h1>
+            <p class="hero-subtitle">Timeless Elegance, Handwoven Mastery</p>
+            <p class="hero-description">Discover authentic Banarasi Sarees crafted by master artisans with over 300 years of heritage</p>
+            <a href="pages/shop.html" class="cta-button primary">Explore Collections</a>
+        </div>
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Global Shipping Banner -->
+    <section class="shipping-banner">
+        <div class="banner-content">
+            <div class="banner-item">
+                <i class="fas fa-globe"></i>
+                <h3>Worldwide Shipping</h3>
+                <p>We deliver to 150+ countries</p>
+            </div>
+            <div class="banner-item">
+                <i class="fas fa-lock"></i>
+                <h3>100% Secure</h3>
+                <p>SSL encrypted checkout</p>
+            </div>
+            <div class="banner-item">
+                <i class="fas fa-undo"></i>
+                <h3>Easy Returns</h3>
+                <p>30-day return policy</p>
+            </div>
+            <div class="banner-item">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>WhatsApp, Email, Phone</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Story Section -->
+    <section class="brand-story">
+        <div class="container">
+            <div class="story-content">
+                <h2>The Royal Heritage</h2>
+                <p>For over three centuries, the artisans of Banaras have perfected the art of saree weaving. Each piece is a masterpiece, representing the grandeur of Indian textile traditions. VINARM BANARSI RITHEE is dedicated to bringing these timeless creations to the world, preserving authentic craftsmanship while celebrating modern elegance.</p>
+                <a href="pages/about.html" class="cta-button secondary">Learn Our Story</a>
+            </div>
+            <div class="story-image">
+                <img src="images/heritage-banner.jpg" alt="Banarasi Weaving Heritage" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Sarees Section -->
+    <section class="featured-sarees">
+        <div class="container">
+            <h2 class="section-title">Featured Collections</h2>
+            <div class="saree-grid" id="featuredSarees">
+                <!-- Sarees will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section class="best-sellers">
+        <div class="container">
+            <h2 class="section-title">Best Sellers</h2>
+            <div class="saree-grid" id="bestSellers">
+                <!-- Best sellers will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="images/bridal-category.jpg" alt="Bridal Collection">
+                    <div class="category-overlay">
+                        <h3>Bridal Collection</h3>
+                        <a href="pages/shop.html?category=bridal" class="cta-button">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/wedding-category.jpg" alt="Wedding Wear">
+                    <div class="category-overlay">
+                        <h3>Wedding Wear</h3>
+                        <a href="pages/shop.html?category=wedding" class="cta-button">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/party-category.jpg" alt="Party Wear">
+                    <div class="category-overlay">
+                        <h3>Party Wear</h3>
+                        <a href="pages/shop.html?category=party" class="cta-button">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/silk-category.jpg" alt="Pure Silk">
+                    <div class="category-overlay">
+                        <h3>Pure Silk Katan</h3>
+                        <a href="pages/shop.html?fabric=katan" class="cta-button">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose VINARM BANARSI RITHEE?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-hands"></i>
+                    <h3>Handwoven</h3>
+                    <p>Each saree is meticulously handwoven by skilled artisans using traditional techniques passed down through generations.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Authentic Materials</h3>
+                    <p>We use only the finest silk, pure zari, and premium fabrics sourced directly from Banaras mills.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certification</h3>
+                    <p>Each saree comes with authenticity certificate and complete details of weaving technique and materials.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-box"></i>
+                    <h3>Premium Packaging</h3>
+                    <p>Your saree is carefully packaged in muslin cloth and secured in premium boxes for safe delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Customer Love</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The quality and authenticity of the saree exceeded my expectations. It's a true masterpiece. Will definitely order again!"</p>
+                    <p class="testimonial-author">- Priya Sharma, Dubai</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Incredible craftsmanship! The zari work is stunning and the fabric feels luxurious. Worth every penny."</p>
+                    <p class="testimonial-author">- Anjali Verma, London</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Fast shipping to USA and excellent customer service. The saree arrived in perfect condition!"</p>
+                    <p class="testimonial-author">- Deepika Patel, New York</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Absolutely gorgeous! This is my wedding saree and I felt like a queen. Highly recommended!"</p>
+                    <p class="testimonial-author">- Nisha Gupta, Sydney</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Shipping Info -->
+    <section class="shipping-info">
+        <div class="container">
+            <h2 class="section-title">Deliver to 150+ Countries</h2>
+            <p class="info-text">We ship worldwide with reliable courier partners. Check out our shipping details, delivery timelines, and return policies.</p>
+            <a href="pages/shipping.html" class="cta-button primary">View Shipping Details</a>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Be Part of VINARM BANARSI RITHEE Family</h2>
+            <p>Subscribe to get exclusive offers, new collection launches, and styling tips.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="cta-button primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>VINARM BANARSI RITHEE</h4>
+                    <p>Premium handwoven Banarasi Sarees for the modern woman who values tradition and elegance.</p>
+                    <div class="social-links">
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="pages/shop.html">Shop</a></li>
+                        <li><a href="pages/collections.html">Collections</a></li>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="pages/shipping.html">Shipping & Returns</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#size-guide">Size & Draping Guide</a></li>
+                        <li><a href="#care">Care Instructions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="mailto:hello@royalsarees.com">hello@royalsarees.com</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/919876543210">+91 98765 43210</a></p>
+                    <p>Phone: +1 (800) ROYAL-SAR</p>
+                    <p>Address: Banaras, Uttar Pradesh, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VINARM BANARSI RITHEE. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#returns">Return Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

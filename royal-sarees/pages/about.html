@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About VINARM BANARSI RITHEE - Banarasi Heritage & Craftsmanship">
+    <title>About Us | VINARM BANARSI RITHEE</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-maroon) 100%);
+            color: white;
+            padding: var(--spacing-xxl) var(--spacing-lg);
+            text-align: center;
+        }
+
+        .about-section {
+            padding: var(--spacing-xxl) var(--spacing-lg);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xxl);
+            align-items: center;
+        }
+
+        .about-grid:nth-child(even) {
+            direction: rtl;
+        }
+
+        .about-grid:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-content h2 {
+            color: var(--primary-maroon);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .about-content p {
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.9;
+        }
+
+        .timeline {
+            padding: var(--spacing-xxl) var(--spacing-lg);
+            background-color: var(--bg-light);
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xxl);
+            align-items: flex-start;
+        }
+
+        .timeline-marker {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-maroon);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+            font-size: var(--font-size-lg);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-maroon);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-xl);
+            padding: var(--spacing-xxl) var(--spacing-lg);
+        }
+
+        .team-member {
+            text-align: center;
+            background-color: var(--bg-white);
+            padding: var(--spacing-xl);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .team-member-image {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto var(--spacing-lg);
+            background: linear-gradient(135deg, var(--primary-maroon), var(--primary-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .team-member h3 {
+            color: var(--primary-maroon);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .team-member p {
+            color: var(--text-light);
+            font-size: var(--font-size-sm);
+        }
+
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid:nth-child(even) {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-crown"></i>
+                <span>VINARM BANARSI RITHEE</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#search" class="nav-icon" title="Search"><i class="fas fa-search"></i></a>
+                <a href="#wishlist" class="nav-icon" title="Wishlist"><i class="fas fa-heart"></i><span class="badge" id="wishlistCount">0</span></a>
+                <a href="#cart" class="nav-icon" title="Cart"><i class="fas fa-shopping-bag"></i><span class="badge" id="cartCount">0</span></a>
+                <a href="#account" class="nav-icon" title="Account"><i class="fas fa-user"></i></a>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 style="margin-bottom: var(--spacing-lg);">Our Heritage</h1>
+            <p style="font-size: var(--font-size-md); max-width: 600px; margin: 0 auto;">Preserving 300 years of Banarasi weaving tradition with authenticity and pride</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="about-section">
+        <div class="container about-grid">
+            <div class="about-content">
+                <h2>The VINARM BANARSI RITHEE Story</h2>
+                <p>VINARM BANARSI RITHEE was founded with a singular vision: to bring the timeless elegance of authentic Banarasi sarees to the world while honoring the master artisans who have perfected this craft over three centuries.</p>
+                <p>Every saree in our collection is handwoven by skilled craftsmen in the sacred city of Banaras, using traditional techniques that have been passed down through generations. We work directly with these artisans, ensuring fair wages and preserving their livelihoods.</p>
+                <p>Our commitment is not just to provide premium sarees, but to tell the story of each piece – the heritage, the craftsmanship, and the pride of Indian textile traditions.</p>
+            </div>
+            <div class="about-image">
+                <img src="../images/heritage-story.jpg" alt="Our Heritage">
+            </div>
+        </div>
+    </section>
+
+    <!-- Banaras Weaving Tradition -->
+    <section class="about-section" style="background-color: var(--bg-light);">
+        <div class="container about-grid">
+            <div class="about-image">
+                <img src="../images/weaving-tradition.jpg" alt="Banaras Weaving">
+            </div>
+            <div class="about-content">
+                <h2>Banaras Weaving Tradition</h2>
+                <p>Banaras, the ancient city of light, has been the epicenter of Indian textile excellence for over 300 years. The city's master weavers have created some of the world's most exquisite fabrics, with sarees being their crown jewel.</p>
+                <p>The Banarasi saree represents the pinnacle of Indian textile art. Each saree is a masterpiece that takes weeks or even months to complete, with every thread carefully placed by hand using traditional handlooms.</p>
+                <p>The intricate zari work (gold thread embroidery), the finest silks, and the timeless motifs make each Banarasi saree a precious heirloom that can be passed down through generations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craftsmanship -->
+    <section class="about-section">
+        <div class="container about-grid">
+            <div class="about-content">
+                <h2>Our Craftsmanship</h2>
+                <p>Every saree that bears the VINARM BANARSI RITHEE name is a testament to uncompromising quality. We source only the finest materials: pure silk, premium zari, and the highest grade fabrics available.</p>
+                <p>Our artisans work with meticulous attention to detail, ensuring that every weave, every pattern, and every embellishment meets our exacting standards. The average Banarasi saree requires 2-4 months of dedicated handwork.</p>
+                <p>We believe that true luxury is not about price, but about the care, skill, and passion invested in creating something extraordinary. That's what sets VINARM BANARSI RITHEE apart.</p>
+            </div>
+            <div class="about-image">
+                <img src="../images/craftsmanship.jpg" alt="Master Craftsmanship">
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--primary-maroon); margin-bottom: var(--spacing-xxl);">Our Journey</h2>
+            <div class="timeline-item">
+                <div class="timeline-marker">300+</div>
+                <div class="timeline-content">
+                    <h3>Years of Heritage</h3>
+                    <p>The Banarasi weaving tradition dates back over 300 years, preserving unbroken lineage of craftsmanship and excellence.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker">50+</div>
+                <div class="timeline-content">
+                    <h3>Artisan Partners</h3>
+                    <p>We work directly with 50+ master weavers and their families in Banaras, supporting their livelihoods and preserving their craft.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker">150+</div>
+                <div class="timeline-content">
+                    <h3>Countries Served</h3>
+                    <p>VINARM BANARSI RITHEE ships to over 150 countries worldwide, bringing Banarasi heritage to customers across the globe.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker">10K+</div>
+                <div class="timeline-content">
+                    <h3>Happy Customers</h3>
+                    <p>Over 10,000 satisfied customers worldwide have chosen VINARM BANARSI RITHEE for their special occasions and collections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="about-section">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--primary-maroon); margin-bottom: var(--spacing-xxl);">Our Values</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-xl);">
+                <div style="text-align: center; padding: var(--spacing-xl);">
+                    <i class="fas fa-heart" style="font-size: 3rem; color: var(--primary-maroon); margin-bottom: var(--spacing-lg);"></i>
+                    <h3 style="color: var(--primary-maroon);">Authenticity</h3>
+                    <p>We guarantee genuine, handwoven Banarasi sarees with complete transparency about materials and craftsmanship.</p>
+                </div>
+                <div style="text-align: center; padding: var(--spacing-xl);">
+                    <i class="fas fa-hands-helping" style="font-size: 3rem; color: var(--primary-maroon); margin-bottom: var(--spacing-lg);"></i>
+                    <h3 style="color: var(--primary-maroon);">Fair Trade</h3>
+                    <p>We ensure fair wages and ethical practices for all artisans, supporting sustainable livelihoods in Banaras.</p>
+                </div>
+                <div style="text-align: center; padding: var(--spacing-xl);">
+                    <i class="fas fa-globe" style="font-size: 3rem; color: var(--primary-maroon); margin-bottom: var(--spacing-lg);"></i>
+                    <h3 style="color: var(--primary-maroon);">Global Reach</h3>
+                    <p>We bring the beauty of Indian heritage textiles to customers worldwide, celebrating cultural richness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>VINARM BANARSI RITHEE</h4>
+                    <p>Premium handwoven Banarasi Sarees for the modern woman who values tradition and elegance.</p>
+                    <div class="social-links">
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="shipping.html">Shipping & Returns</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#size-guide">Size Guide</a></li>
+                        <li><a href="#care">Care Instructions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="mailto:hello@royalsarees.com">hello@royalsarees.com</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/919876543210">+91 98765 43210</a></p>
+                    <p>Phone: +1 (800) ROYAL-SAR</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VINARM BANARSI RITHEE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop premium Banarasi sarees - Browse our complete collection">
+    <title>Shop | VINARM BANARSI RITHEE</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .shop-container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: var(--spacing-xl);
+            padding: var(--spacing-xxl) var(--spacing-lg);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .shop-filters {
+            background-color: var(--bg-light);
+            padding: var(--spacing-xl);
+            border-radius: 8px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .filter-group {
+            margin-bottom: var(--spacing-xl);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: var(--spacing-lg);
+        }
+
+        .filter-group:last-child {
+            border-bottom: none;
+        }
+
+        .filter-group h3 {
+            font-size: var(--font-size-sm);
+            color: var(--primary-maroon);
+            margin-bottom: var(--spacing-lg);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--spacing-sm);
+            cursor: pointer;
+        }
+
+        .filter-option input {
+            width: auto;
+            margin-right: var(--spacing-sm);
+            cursor: pointer;
+        }
+
+        .filter-option label {
+            cursor: pointer;
+            flex: 1;
+            color: var(--text-light);
+            font-size: var(--font-size-sm);
+        }
+
+        .price-range-container {
+            display: flex;
+            gap: var(--spacing-sm);
+            align-items: center;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .price-range-input {
+            width: 100%;
+            height: 5px;
+            border-radius: 3px;
+            background: var(--border-color);
+            outline: none;
+;
+        }
+
+        .price-range-input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-maroon);
+            cursor: pointer;
+        }
+
+        .price-range-input::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-maroon);
+            cursor: pointer;
+            border: none;
+        }
+
+        .shop-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .shop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-xl);
+            flex-wrap: wrap;
+            gap: var(--spacing-lg);
+        }
+
+        .results-info {
+            color: var(--text-light);
+            font-size: var(--font-size-sm);
+        }
+
+        .sort-container {
+            display: flex;
+            gap: var(--spacing-sm);
+            align-items: center;
+        }
+
+        .sort-container select {
+            padding: var(--spacing-sm);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-xl);
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: var(--spacing-xxl);
+            color: var(--text-light);
+        }
+
+        .clear-filters {
+            background-color: transparent;
+            color: var(--primary-maroon);
+            border: 1px solid var(--primary-maroon);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            width: 100%;
+            margin-top: var(--spacing-lg);
+        }
+
+        .clear-filters:hover {
+            background-color: var(--primary-maroon);
+            color: var(--bg-white);
+        }
+
+        @media (max-width: 1024px) {
+            .shop-container {
+                grid-template-columns: 1fr;
+            }
+
+            .shop-filters {
+                position: relative;
+                top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .shop-filters {
+                display: none;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .shop-header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .sort-container {
+                width: 100%;
+            }
+
+            .sort-container select {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-crown"></i>
+                <span>VINARM BANARSI RITHEE</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#search" class="nav-icon" title="Search"><i class="fas fa-search"></i></a>
+                <a href="#wishlist" class="nav-icon" title="Wishlist"><i class="fas fa-heart"></i><span class="badge" id="wishlistCount">0</span></a>
+                <a href="#cart" class="nav-icon" title="Cart"><i class="fas fa-shopping-bag"></i><span class="badge" id="cartCount">0</span></a>
+                <a href="#account" class="nav-icon" title="Account"><i class="fas fa-user"></i></a>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, var(--primary-navy), var(--primary-maroon)); color: white; padding: var(--spacing-xxl) var(--spacing-lg); text-align: center;">
+        <h1 style="margin-bottom: var(--spacing-md);">Our Collections</h1>
+        <p>Discover our exquisite range of handwoven Banarasi sarees</p>
+    </section>
+
+    <!-- Shop Container -->
+    <div class="shop-container">
+        <!-- Filters Sidebar -->
+        <aside class="shop-filters">
+            <h2 style="margin-bottom: var(--spacing-lg); font-size: var(--font-size-md); color: var(--primary-maroon);">Filters</h2>
+
+            <!-- Collection Filter -->
+            <div class="filter-group">
+                <h3>Collection</h3>
+                <div class="filter-option">
+                    <input type="checkbox" id="bridal" name="collection" value="bridal">
+                    <label for="bridal">Bridal</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="wedding" name="collection" value="wedding">
+                    <label for="wedding">Wedding</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="party" name="collection" value="party">
+                    <label for="party">Party Wear</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="everyday" name="collection" value="everyday">
+                    <label for="everyday">Everyday</label>
+                </div>
+            </div>
+
+            <!-- Fabric Filter -->
+            <div class="filter-group">
+                <h3>Fabric</h3>
+                <div class="filter-option">
+                    <input type="checkbox" id="katan" name="fabric" value="katan">
+                    <label for="katan">Katan Silk</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="organza" name="fabric" value="organza">
+                    <label for="organza">Organza</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="georgette" name="fabric" value="georgette">
+                    <label for="georgette">Georgette</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="silk" name="fabric" value="silk">
+                    <label for="silk">Pure Silk</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="tissue" name="fabric" value="tissue">
+                    <label for="tissue">Tissue</label>
+                </div>
+            </div>
+
+            <!-- Price Filter -->
+            <div class="filter-group">
+                <h3>Price Range</h3>
+                <div style="margin-bottom: var(--spacing-lg);">
+                    <label style="color: var(--text-light); font-size: var(--font-size-xs); display: block; margin-bottom: var(--spacing-sm);">
+                        Min: ₹<span id="minPriceDisplay">0</span>
+                    </label>
+                    <input type="range" id="minPrice" name="minPrice" min="0" max="50000" value="0" class="price-range-input">
+                </div>
+                <div>
+                    <label style="color: var(--text-light); font-size: var(--font-size-xs); display: block; margin-bottom: var(--spacing-sm);">
+                        Max: ₹<span id="maxPriceDisplay">50000</span>
+                    </label>
+                    <input type="range" id="maxPrice" name="maxPrice" min="0" max="50000" value="50000" class="price-range-input">
+                </div>
+            </div>
+
+            <!-- Rating Filter -->
+            <div class="filter-group">
+                <h3>Rating</h3>
+                <div class="filter-option">
+                    <input type="checkbox" id="rating5" name="rating" value="5">
+                    <label for="rating5">★★★★★ (5 Stars)</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="rating4" name="rating" value="4">
+                    <label for="rating4">★★★★ & up (4+ Stars)</label>
+                </div>
+            </div>
+
+            <button class="clear-filters" onclick="clearAllFilters()">Clear All Filters</button>
+        </aside>
+
+        <!-- Shop Content -->
+        <div class="shop-content">
+            <!-- Shop Header with Sort -->
+            <div class="shop-header">
+                <div class="results-info">
+                    Showing <span id="resultsCount">0</span> products
+                </div>
+                <div class="sort-container">
+                    <label for="sortBy" style="color: var(--text-dark); font-weight: 600;">Sort by:</label>
+                    <select id="sortBy" onchange="applySort()">
+                        <option value="default">Featured</option>
+                        <option value="newest">Newest</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="shopProducts">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>VINARM BANARSI RITHEE</h4>
+                    <p>Premium handwoven Banarasi Sarees for the modern woman who values tradition and elegance.</p>
+                    <div class="social-links">
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="shipping.html">Shipping & Returns</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#size-guide">Size Guide</a></li>
+                        <li><a href="#care">Care Instructions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="mailto:hello@royalsarees.com">hello@royalsarees.com</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/919876543210">+91 98765 43210</a></p>
+                    <p>Phone: +1 (800) ROYAL-SAR</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VINARM BANARSI RITHEE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../data/products.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Shop Page Specific JavaScript
+        let currentProducts = [...products];
+        let currentFilters = {
+            collections: [],
+            fabrics: [],
+            minPrice: 0,
+            maxPrice: 50000,
+            ratings: []
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            applyFilters();
+            setupFilterListeners();
+            setupPriceRangeListeners();
+        });
+
+        function setupFilterListeners() {
+            document.querySelectorAll('input[name="collection"]').forEach(checkbox => {
+                checkbox.addEventListener('change', applyFilters);
+            });
+
+            document.querySelectorAll('input[name="fabric"]').forEach(checkbox => {
+                checkbox.addEventListener('change', applyFilters);
+            });
+
+            document.querySelectorAll('input[name="rating"]').forEach(checkbox => {
+                checkbox.addEventListener('change', applyFilters);
+            });
+        }
+
+        function setupPriceRangeListeners() {
+            const minPrice = document.getElementById('minPrice');
+            const maxPrice = document.getElementById('maxPrice');
+            const minDisplay = document.getElementById('minPriceDisplay');
+            const maxDisplay = document.getElementById('maxPriceDisplay');
+
+            minPrice.addEventListener('input', function() {
+                if (parseInt(this.value) > parseInt(maxPrice.value)) {
+                    maxPrice.value = this.value;
+                }
+                minDisplay.textContent = this.value;
+                applyFilters();
+            });
+
+            maxPrice.addEventListener('input', function() {
+                if (parseInt(this.value) < parseInt(minPrice.value)) {
+                    minPrice.value = this.value;
+                }
+                maxDisplay.textContent = this.value;
+                applyFilters();
+            });
+        }
+
+        function applyFilters() {
+            // Get selected filters
+            const collections = Array.from(document.querySelectorAll('input[name="collection"]:checked')).map(el => el.value);
+            const fabrics = Array.from(document.querySelectorAll('input[name="fabric"]:checked')).map(el => el.value);
+            const minPrice = parseInt(document.getElementById('minPrice').value);
+            const maxPrice = parseInt(document.getElementById('maxPrice').value);
+            const ratings = Array.from(document.querySelectorAll('input[name="rating"]:checked')).map(el => parseInt(el.value));
+
+            currentFilters = { collections, fabrics, minPrice, maxPrice, ratings };
+
+            // Filter products
+            currentProducts = products.filter(product => {
+                if (collections.length > 0 && !collections.includes(product.category)) return false;
+                if (fabrics.length > 0 && !fabrics.includes(product.fabric)) return false;
+                if (product.price < minPrice || product.price > maxPrice) return false;
+                if (ratings.length > 0 && !ratings.some(rating => product.rating >= rating)) return false;
+                return true;
+            });
+
+            displayShopProducts();
+        }
+
+        function applySort() {
+            const sortValue = document.getElementById('sortBy').value;
+            currentProducts = sortProducts(currentProducts, sortValue);
+            displayShopProducts();
+        }
+
+        function displayShopProducts() {
+            const container = document.getElementById('shopProducts');
+            const resultsCount = document.getElementById('resultsCount');
+
+            resultsCount.textContent = currentProducts.length;
+
+            if (currentProducts.length === 0) {
+                container.innerHTML = '<div class="no-results"><p><i class="fas fa-search" style="font-size: 3rem; color: var(--primary-maroon); margin-bottom: var(--spacing-lg); display: block;"></i>No products found matching your filters.<br><br>Try adjusting your search criteria.</p></div>';
+                return;
+            }
+
+            container.innerHTML = '';
+            currentProducts.forEach(product => {
+                const card = createProductCard(product);
+                container.appendChild(card);
+            });
+        }
+
+        function clearAllFilters() {
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            document.getElementById('minPrice').value = 0;
+            document.getElementById('maxPrice').value = 50000;
+            document.getElementById('minPriceDisplay').textContent = 0;
+            document.getElementById('maxPriceDisplay').textContent = 50000;
+            document.getElementById('sortBy').value = 'default';
+            applyFilters();
+        }
+    </script>
+</body>
+</html>
+
